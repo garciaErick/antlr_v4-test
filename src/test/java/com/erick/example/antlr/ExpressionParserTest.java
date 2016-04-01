@@ -1,4 +1,4 @@
-package com.nibado.example.antlr;
+package com.erick.example.antlr;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.equalTo;

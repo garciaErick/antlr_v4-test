@@ -1,4 +1,4 @@
-package com.nibado.example.antlr;
+package com.erick.example.antlr;
 
 import java.util.BitSet;
 import java.util.Locale;
@@ -12,7 +12,7 @@ import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.atn.ATNConfigSet;
 import org.antlr.v4.runtime.dfa.DFA;
 
-import com.nibado.example.antlr.SimpleParser.ExprContext;
+import com.erick.example.antlr.SimpleParser.ExprContext;
 
 public class ExpressionParser {
     private final ANTLRErrorListener _listener = createErrorListener();
