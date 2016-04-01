@@ -14,7 +14,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 
 import com.erick.example.antlr.SimpleParser.ExprContext;
 
-public class ExpressionParser {
+public class MySQLExpressionParser {
     private final ANTLRErrorListener _listener = createErrorListener();
 
     /**
@@ -27,14 +27,13 @@ public class ExpressionParser {
          * Create a lexer that reads from our expression string
          */
         final SimpleLexer lexer = new SimpleLexer(new ANTLRInputStream(expression));
-        final MySQLLexer lexer_s = new MySQLLexer(new ANTLRInputStream(expression));
 
         /*
          * By default Antlr4 lexers / parsers have an attached error listener
          * that prints errors to stderr. I prefer them to throw an exception
          * instead so I implemented my own error listener which is attached
          * here. I also remove any existing error listeners.
-         *
+         */
         lexer.removeErrorListeners();
         lexer.addErrorListener(_listener);
 
