@@ -12,6 +12,7 @@ import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.atn.ATNConfigSet;
 import org.antlr.v4.runtime.dfa.DFA;
 
+import com.erick.example.antlr.MySQLParser.Select_clauseContext;
 import com.erick.example.antlr.MySQLParser.StatContext;
 
 public class MySQLExpressionParser {
@@ -67,9 +68,10 @@ public class MySQLExpressionParser {
 	 * leaf.
 	 */
 	private String visit(final StatContext context) {
-		context.select_clause();
-		System.out.println("Hello");
-		return "hello";
+		if (context.select_clause() != null) {
+			SelectParser s_parser = new SelectParser(context.select_clause().get(0));
+			System.out.println(s_parser);
+		}
 		// if (context.number() != null) { //Just a number
 		// return Integer.parseInt(context.number().getText());
 		// }
@@ -91,6 +93,7 @@ public class MySQLExpressionParser {
 		// else {
 		// throw new IllegalStateException();
 		// }
+		return null;
 	}
 
 	/*
