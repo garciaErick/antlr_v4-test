@@ -4,57 +4,57 @@ lexer grammar MySQLLexer;
  }
 
 SELECT
-   : 'select'
+   : 'select' | 'SELECT'
    ;
 
 
 FROM
-   : 'from'
+   : 'from' | 'FROM'
    ;
 
 
 WHERE
-   : 'where'
+   : 'where' | 'WHERE'
    ;
 
 
 AND
-   : 'and' | '&&'
+   : 'and' | '&&' | 'AND'
    ;
 
 
 OR
-   : 'or' | '||'
+   : 'or' | '||' | 'OR'
    ;
 
 
 XOR
-   : 'xor'
+   : 'xor' | 'XOR'
    ;
 
 
 IS
-   : 'is'
+   : 'is' | 'IS'
    ;
 
 
 NULL
-   : 'null'
+   : 'null' | 'NULL'
    ;
 
 
 LIKE
-   : 'like'
+   : 'like' | 'LIKE'
    ;
 
 
 IN
-   : 'in'
+   : 'in' | 'IN'
    ;
 
 
 EXISTS
-   : 'exists'
+   : 'exists' | 'EXISTS'
    ;
 
 
@@ -89,7 +89,7 @@ MOD
 
 
 BETWEEN
-   : 'between'
+   : 'between' | 'BETWEEN'
    ;
 
 
@@ -204,7 +204,7 @@ NOT_EQ
 
 
 NOT
-   : 'not'
+   : 'not' | 'NOT'
    ;
 
 
@@ -249,7 +249,7 @@ OUTER
 
 
 JOIN
-   : 'join'
+   : 'join' | 'JOIN'
    ;
 
 
@@ -259,7 +259,7 @@ CROSS
 
 
 USING
-   : 'using'
+   : 'using' | 'USING'
    ;
 
 
@@ -269,32 +269,32 @@ INDEX
 
 
 KEY
-   : 'key'
+   : 'key' | 'KEY'
    ;
 
 
 ORDER
-   : 'order'
+   : 'order' | 'ORDER'
    ;
 
 
 GROUP
-   : 'group'
+   : 'group' | 'GROUP'
    ;
 
 
 BY
-   : 'by'
+   : 'by' | 'BY'
    ;
 
 
 FOR
-   : 'for'
+   : 'for' | 'FOR'
    ;
 
 
 USE
-   : 'use'
+   : 'use' | 'USE'
    ;
 
 
