@@ -15,7 +15,6 @@ public class MySQLVisitor {
   private Column_list_clauseContext c_list;
   private Where_clauseContext       w_clause;
   private List<Join_clauseContext>  j_clause_list;
-
   /**
    * Creates a Visitor for the SQL AST 
    * @param StatContext root
@@ -26,6 +25,11 @@ public class MySQLVisitor {
   }
 
   public void visit(final StatContext context) {
+    /**
+     * TODO Make grammar work with "DOT"
+     * TODO Implement the Join Expression Parser
+     * TODO Ask about what parts to parse
+     */
     try{
       if (context.select_clause() != null) {
         SelectParser s_statementParser = new SelectParser(context.select_clause().get(0));
