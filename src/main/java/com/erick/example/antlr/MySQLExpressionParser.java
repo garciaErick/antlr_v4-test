@@ -12,25 +12,17 @@ import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.atn.ATNConfigSet;
 import org.antlr.v4.runtime.dfa.DFA;
 
-import com.erick.example.antlr.MySQLParser.Select_clauseContext;
-import com.erick.example.antlr.MySQLParser.StatContext;
-
 public class MySQLExpressionParser {
 	private final ANTLRErrorListener _listener = createErrorListener();
 
 	/**
-	 * Parses an expression into an integer result.
-	 * 
+	 * Parses a MySQL expression 
 	 * @param expression
 	 *            the expression to part
-	 * @return and integer result
 	 */
-	public String parse(final String expression) {
-		/*
-		 * Create a lexer that reads from our expression string
-		 */
+	public void parse(final String expression) {
+		// Create a lexer that reads from our expression string
 		final MySQLLexer lexer = new MySQLLexer(new ANTLRInputStream(expression));
-
 		/*
 		 * By default Antlr4 lexers / parsers have an attached error listener
 		 * that prints errors to stderr. I prefer them to throw an exception
@@ -39,7 +31,6 @@ public class MySQLExpressionParser {
 		 */
 		lexer.removeErrorListeners();
 		lexer.addErrorListener(_listener);
-
 		/*
 		 * The lexer reads characters and lexes them into token stream. The
 		 * tokens are consumed by the parser that then builds an Abstract Syntax
@@ -49,52 +40,18 @@ public class MySQLExpressionParser {
 		final MySQLParser parser = new MySQLParser(tokens);
 		parser.removeErrorListeners();
 		parser.addErrorListener(_listener);
-
 		/*
-		 * The ExprContext is the root of our Abstract Syntax Tree
+		 * The StatContext is the root of our MySQL Abstract Syntax Tree
+     * final StatContext MySQL_AST_root = parser.stat();
 		 */
-		final StatContext context = parser.stat();
-		// final ExpressionContext context = parser.expression();
-		// final Expr_opContext context = parser.expr_op();
-
-		/*
-		 * 'Visit' all the branches of the tree to get our expression result.
-		 */
-		return visit(context);
+		// Visit all the branches of the tree to get our expression result.
+    MySQLVisitor visitor = new MySQLVisitor(parser.stat());
 	}
 
 	/*
 	 * Visits the branches in the expression tree recursively until we hit a
 	 * leaf.
 	 */
-	private String visit(final StatContext context) {
-		if (context.select_clause() != null) {
-			SelectParser s_parser = new SelectParser(context.select_clause().get(0));
-			System.out.println(s_parser);
-		}
-		// if (context.number() != null) { //Just a number
-		// return Integer.parseInt(context.number().getText());
-		// }
-		// else if (context.BR_CLOSE() != null) { //Expression between brackets
-		// return visit(context.expr(0));
-		// }
-		// else if (context.TIMES() != null) { //Expression * expression
-		// return visit(context.expr(0)) * visit(context.expr(1));
-		// }
-		// else if (context.DIV() != null) { //Expression / expression
-		// return visit(context.expr(0)) / visit(context.expr(1));
-		// }
-		// else if (context.PLUS() != null) { //Expression + expression
-		// return visit(context.expr(0)) + visit(context.expr(1));
-		// }
-		// else if (context.MINUS() != null) { //Expression - expression
-		// return visit(context.expr(0)) - visit(context.expr(1));
-		// }
-		// else {
-		// throw new IllegalStateException();
-		// }
-		return null;
-	}
 
 	/*
 	 * Helper method to create an ANTLRErrorListener. We're only interested in

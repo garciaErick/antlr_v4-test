@@ -10,9 +10,9 @@ public class SelectParser {
 	private Table_referencesContext   t_references;
 	private Column_list_clauseContext c_list;
 	private Where_clauseContext       w_clause;
+
 	/**
 	 * Creates a Select Clause Parser
-	 * 
 	 * @param Select_clauseContext
 	 *            - The select clause to parse
 	 */
@@ -40,10 +40,9 @@ public class SelectParser {
 	}
 	
 	public String toString(){
-		String s = "SELECT " + this.getC_list().getText() + " FROM " + this.getT_references().getText();
-		if(this.getW_clause() != null){
-			s+= " WHERE " + this.getW_clause().getText();
-		}
+		String s = "SELECT: " + this.getC_list().getText() + "\nFROM: " + this.getT_references().getText();
+		if(this.getW_clause() != null)
+			s+= "\n" + this.getW_clause().getText();
 		return s;
 	}
 

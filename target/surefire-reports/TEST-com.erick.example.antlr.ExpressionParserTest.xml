@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="1" name="com.erick.example.antlr.ExpressionParserTest" time="0.052" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="com.erick.example.antlr.ExpressionParserTest" time="0.047" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -25,7 +25,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/egarcia87/source_code/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf1290754538800212502.tmp"/>
+    <property name="classworlds.conf" value="/home/egarcia87/source_code/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf5662799570461814178.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -59,139 +59,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testDiv" time="0.038"/>
-  <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testMinus" time="0"/>
+  <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testDiv" time="0.045"/>
+  <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testMinus" time="0.002"/>
   <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testTimes" time="0"/>
   <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testPlus" time="0"/>
   <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testComplex" time="0"/>
-  <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testInvalid" time="0.014">
-    <failure message="
-Expected: (an instance of java.lang.IllegalArgumentException and exception with message a string containing &quot;token recognition error at: &apos;#&apos;&quot;)
-     but: exception with message a string containing &quot;token recognition error at: &apos;#&apos;&quot; message was &quot;Exception parsing expression: &apos;extraneous input &apos;2&apos; expecting {PLUS, MINUS, TIMES, DIV, &apos;)&apos;}&apos; on line 1, position 6&quot;
-Stacktrace was: java.lang.IllegalArgumentException: Exception parsing expression: &apos;extraneous input &apos;2&apos; expecting {PLUS, MINUS, TIMES, DIV, &apos;)&apos;}&apos; on line 1, position 6
-	at com.erick.example.antlr.ExpressionParser$1.syntaxError(ExpressionParser.java:97)
-	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:65)
-	at org.antlr.v4.runtime.Parser.notifyErrorListeners(Parser.java:558)
-	at org.antlr.v4.runtime.DefaultErrorStrategy.reportUnwantedToken(DefaultErrorStrategy.java:377)
-	at org.antlr.v4.runtime.DefaultErrorStrategy.singleTokenDeletion(DefaultErrorStrategy.java:541)
-	at org.antlr.v4.runtime.DefaultErrorStrategy.sync(DefaultErrorStrategy.java:266)
-	at com.erick.example.antlr.SimpleParser.expr(SimpleParser.java:177)
-	at com.erick.example.antlr.SimpleParser.expr(SimpleParser.java:161)
-	at com.erick.example.antlr.SimpleParser.expr(SimpleParser.java:140)
-	at com.erick.example.antlr.ExpressionParser.parse(ExpressionParser.java:54)
-	at com.erick.example.antlr.ExpressionParserTest.testInvalid(ExpressionParserTest.java:70)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
-	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: (an instance of java.lang.IllegalArgumentException and exception with message a string containing &quot;token recognition error at: &apos;#&apos;&quot;)
-     but: exception with message a string containing &quot;token recognition error at: &apos;#&apos;&quot; message was &quot;Exception parsing expression: &apos;extraneous input &apos;2&apos; expecting {PLUS, MINUS, TIMES, DIV, &apos;)&apos;}&apos; on line 1, position 6&quot;
-Stacktrace was: java.lang.IllegalArgumentException: Exception parsing expression: &apos;extraneous input &apos;2&apos; expecting {PLUS, MINUS, TIMES, DIV, &apos;)&apos;}&apos; on line 1, position 6
-	at com.erick.example.antlr.ExpressionParser$1.syntaxError(ExpressionParser.java:97)
-	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:65)
-	at org.antlr.v4.runtime.Parser.notifyErrorListeners(Parser.java:558)
-	at org.antlr.v4.runtime.DefaultErrorStrategy.reportUnwantedToken(DefaultErrorStrategy.java:377)
-	at org.antlr.v4.runtime.DefaultErrorStrategy.singleTokenDeletion(DefaultErrorStrategy.java:541)
-	at org.antlr.v4.runtime.DefaultErrorStrategy.sync(DefaultErrorStrategy.java:266)
-	at com.erick.example.antlr.SimpleParser.expr(SimpleParser.java:177)
-	at com.erick.example.antlr.SimpleParser.expr(SimpleParser.java:161)
-	at com.erick.example.antlr.SimpleParser.expr(SimpleParser.java:140)
-	at com.erick.example.antlr.ExpressionParser.parse(ExpressionParser.java:54)
-	at com.erick.example.antlr.ExpressionParserTest.testInvalid(ExpressionParserTest.java:70)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
-	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.junit.Assert.assertThat(Assert.java:956)
-	at org.junit.Assert.assertThat(Assert.java:923)
-	at org.junit.rules.ExpectedException.handleException(ExpectedException.java:252)
-	at org.junit.rules.ExpectedException.access$000(ExpectedException.java:106)
-	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:241)
-	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-    <system-err>line 1:4 token recognition error at: &apos;#&apos;
-</system-err>
-  </testcase>
   <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testNumber" time="0"/>
   <testcase classname="com.erick.example.antlr.ExpressionParserTest" name="testNumberBrackets" time="0"/>
 </testsuite>

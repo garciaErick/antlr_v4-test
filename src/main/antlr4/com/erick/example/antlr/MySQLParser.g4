@@ -13,7 +13,10 @@ schema_name
    ;
 
 select_clause
-   : SELECT column_list_clause ( FROM table_references )? ( where_clause )?
+   : SELECT column_list_clause ( FROM table_references )? (
+       where_clause )? SEMI
+   | SELECT column_list_clause ( FROM table_references )? (
+       where_clause )? 
    ;
 
 table_name
@@ -41,7 +44,7 @@ column_list
    ;
 
 column_list_clause
-   : column_name ( COMMA column_name )*
+   : column_name ( COMMA column_name )* | ASTERISK
    ;
 
 from_clause
