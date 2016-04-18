@@ -1,6 +1,10 @@
-/home/egarcia87/source_code/antlr_v4-test/src/main/java/com/erick/example/antlr/MySQLExpressionParser.java
 /home/egarcia87/source_code/antlr_v4-test/target/generated-sources/antlr4/com/erick/example/antlr/SimpleParser.java
-/home/egarcia87/source_code/antlr_v4-test/src/main/java/com/erick/example/antlr/ExpressionParser.java
+/home/egarcia87/source_code/antlr_v4-test/src/main/java/com/erick/example/antlr/Table_referencesParser.java
+/home/egarcia87/source_code/antlr_v4-test/src/main/java/com/erick/example/antlr/MySQLVisitor.java
+/home/egarcia87/source_code/antlr_v4-test/src/main/java/com/erick/example/antlr/MySQLTest.java
 /home/egarcia87/source_code/antlr_v4-test/target/generated-sources/antlr4/com/erick/example/antlr/MySQLLexer.java
 /home/egarcia87/source_code/antlr_v4-test/target/generated-sources/antlr4/com/erick/example/antlr/SimpleLexer.java
+/home/egarcia87/source_code/antlr_v4-test/src/main/java/com/erick/example/antlr/ExpressionParser.java
 /home/egarcia87/source_code/antlr_v4-test/target/generated-sources/antlr4/com/erick/example/antlr/MySQLParser.java
+/home/egarcia87/source_code/antlr_v4-test/src/main/java/com/erick/example/antlr/SelectParser.java
+/home/egarcia87/source_code/antlr_v4-test/src/main/java/com/erick/example/antlr/MySQLExpressionParser.java

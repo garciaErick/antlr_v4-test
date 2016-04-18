@@ -55,13 +55,12 @@ public class MySQLParser extends Parser {
 
 	private static final String[] _LITERAL_NAMES = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
-		"'all'", "'any'", "'true'", "'false'", null, null, null, "'regexp'", "'+'", 
-		"'-'", "'~'", "'|'", "'&'", "'^'", "'binary'", "'<<'", "'>>'", "'escape'", 
-		"'*'", "')'", "'('", "']'", "'['", "':'", "'.*'", "'='", "'<'", "'>'", 
-		"'!='", null, "'<='", "'>='", "';'", "','", "'.'", "'collate'", "'inner'", 
-		"'outer'", null, "'cross'", null, "'index'", null, null, null, null, null, 
-		null, "'ignore'", "'partition'", "'straight_join'", "'natural'", "'left'", 
-		"'right'", "'oj'", "'on'"
+		null, null, null, null, null, null, null, "'regexp'", "'+'", "'-'", "'~'", 
+		"'|'", "'&'", "'^'", "'binary'", "'<<'", "'>>'", "'escape'", "'*'", "')'", 
+		"'('", "']'", "'['", "':'", "'.*'", "'='", "'<'", "'>'", "'!='", null, 
+		"'<='", "'>='", "';'", "','", "'.'", null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, "'straight_join'", 
+		"'natural'", "'left'", "'right'", "'oj'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, "SELECT", "FROM", "WHERE", "AND", "OR", "XOR", "IS", "NULL", "LIKE", 

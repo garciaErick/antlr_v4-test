@@ -59,27 +59,27 @@ EXISTS
 
 
 ALL
-   : 'all'
+   : 'all' | 'ALL'
    ;
 
 
 ANY
-   : 'any'
+   : 'any' | 'ANY'
    ;
 
 
 TRUE
-   : 'true'
+   : 'true' | 'TRUE'
    ;
 
 
 FALSE
-   : 'false'
+   : 'false' | 'FALSE'
    ;
 
 
 DIVIDE
-   : 'div' | '/'
+   : 'div' | '/' | 'DIV'
    ;
 
 
@@ -234,17 +234,17 @@ DOT
 
 
 COLLATE
-   : 'collate'
+   : 'collate' | 'COLLATE'
    ;
 
 
 INNER
-   : 'inner'
+   : 'inner' | 'INNER'
    ;
 
 
 OUTER
-   : 'outer'
+   : 'outer' | 'OUTER'
    ;
 
 
@@ -254,7 +254,7 @@ JOIN
 
 
 CROSS
-   : 'cross'
+   : 'cross' | 'CROSS'
    ;
 
 
@@ -264,7 +264,7 @@ USING
 
 
 INDEX
-   : 'index'
+   : 'index' | 'INDEX'
    ;
 
 
@@ -299,12 +299,12 @@ USE
 
 
 IGNORE
-   : 'ignore'
+   : 'ignore' | 'IGNORE'
    ;
 
 
 PARTITION
-   : 'partition'
+   : 'partition' | 'PARTITION'
    ;
 
 
@@ -334,7 +334,7 @@ OJ
 
 
 ON
-   : 'on'
+   : 'on' | 'ON'
    ;
 
 
