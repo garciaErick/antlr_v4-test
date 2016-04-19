@@ -1,4 +1,4 @@
-package com.erick.example.antlr;
+package com.erick.MySQLParser.antlr;
 
 import com.erick.example.antlr.MySQLParser.Partition_clauseContext;
 import com.erick.example.antlr.MySQLParser.Table_aliasContext;

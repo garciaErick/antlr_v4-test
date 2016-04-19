@@ -1,4 +1,4 @@
-package com.erick.example.antlr;
+package com.erick.MySQLParser.antlr;
 
 public class MySQLTest {
 

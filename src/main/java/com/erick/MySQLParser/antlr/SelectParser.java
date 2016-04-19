@@ -1,4 +1,4 @@
-package com.erick.example.antlr;
+package com.erick.MySQLParser.antlr;
 
 import com.erick.example.antlr.MySQLParser.Column_list_clauseContext;
 import com.erick.example.antlr.MySQLParser.Select_clauseContext;

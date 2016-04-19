@@ -1,4 +1,4 @@
-package com.erick.example.antlr;
+package com.erick.MySQLParser.antlr;
 
 import com.erick.example.antlr.MySQLParser.Column_nameContext;
 import com.erick.example.antlr.MySQLParser.Column_name_aliasContext;

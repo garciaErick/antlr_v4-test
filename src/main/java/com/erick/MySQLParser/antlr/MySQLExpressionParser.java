@@ -1,4 +1,4 @@
-package com.erick.example.antlr;
+package com.erick.MySQLParser.antlr;
 
 import java.util.BitSet;
 import java.util.Locale;
@@ -11,6 +11,9 @@ import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.atn.ATNConfigSet;
 import org.antlr.v4.runtime.dfa.DFA;
+
+import com.erick.example.antlr.MySQLLexer;
+import com.erick.example.antlr.MySQLParser;
 
 public class MySQLExpressionParser {
 	private final ANTLRErrorListener _listener = createErrorListener();

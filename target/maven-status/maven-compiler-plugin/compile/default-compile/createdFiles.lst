@@ -11,6 +11,7 @@ com/erick/example/antlr/MySQLParser$Partition_clauseContext.class
 com/erick/example/antlr/MySQLParser$From_clauseContext.class
 com/erick/example/antlr/MySQLParser$Partition_namesContext.class
 com/erick/example/antlr/SimpleParser$CalcContext.class
+com/erick/antlr/expression/ExpressionParser$1.class
 com/erick/example/antlr/MySQLParser$Index_nameContext.class
 com/erick/example/antlr/MySQLParser$Table_referencesContext.class
 com/erick/example/antlr/SimpleParser$NumberContext.class
@@ -33,6 +34,7 @@ com/erick/example/antlr/MySQLParser$Left_elementContext.class
 com/erick/example/antlr/SimpleLexer.class
 com/erick/example/antlr/MySQLParser$Select_clauseContext.class
 com/erick/example/antlr/MySQLParser$Table_atomContext.class
+com/erick/MySQLParser/antlr/MySQLExpressionParser$1.class
 com/erick/example/antlr/MySQLParser$Schema_nameContext.class
 com/erick/example/antlr/MySQLParser$Table_aliasContext.class
 com/erick/example/antlr/MySQLParser$SubqueryContext.class
@@ -45,5 +47,4 @@ com/erick/example/antlr/MySQLParser.class
 com/erick/example/antlr/MySQLParser$Partition_nameContext.class
 com/erick/example/antlr/MySQLParser$Index_listContext.class
 com/erick/example/antlr/SimpleParser$ExprContext.class
-com/erick/example/antlr/ExpressionParser$1.class
 com/erick/example/antlr/MySQLParser$Between_opContext.class
