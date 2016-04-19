@@ -1,50 +1,36 @@
 package com.erick.example.antlr;
 
-import java.util.List;
+import java.util.ArrayList;
 
-import com.erick.example.antlr.MySQLParser.Join_clauseContext;
 import com.erick.example.antlr.MySQLParser.Table_referenceContext;
 import com.erick.example.antlr.MySQLParser.Table_referencesContext;
 
 
 public class Table_referencesParser {
-  private List<Table_referenceContext> t_references;
-  private List<Join_clauseContext>     j_clause_list;
-
+  private Table_referencesContext t_references;
+  private ArrayList<Table_referenceParser> t_referenceParser;
 
   /**
-  *
-  */
+   * table_reference ( ( COMMA table_reference  ) | join_clause  )*
+   */
   public Table_referencesParser(Table_referencesContext t_references) {
-    this.t_references  = t_references.table_reference();
-    this.j_clause_list = t_references.join_clause();
+    this.t_references = t_references;
+    t_referenceParser = new ArrayList<Table_referenceParser>();
+    for(Table_referenceContext t : t_references.table_reference()){
+      t_referenceParser.add(new Table_referenceParser(t));
+    }
   }
 
-  /**
-   * @return the t_references
-   */
-  public List<Table_referenceContext> getT_references() {
-    return t_references;
-  }
-
-  /**
-   * @return the j_clause_list
-   */
-  public List<Join_clauseContext> getJ_clause_list() {
-    return j_clause_list;
-  }
 
   @Override
   public String toString() {
-    String s = "T_REFERENCES: \n";
-    for(Table_referenceContext t : this.t_references){
-      s+= "Goal: " + t.getText() + "\n";
-      Table_factor1Parser t_factor1 = new Table_factor1Parser(t.table_factor1());
-      if (t_factor1 != null)
-        s += "\n" + t_factor1;
-      if(t.table_atom() != null)
-        s += "  Table Atom: " + t.table_atom().getText();
-  }
+    String s = "FROM: \n";
+    for (Table_referenceParser t : t_referenceParser) {
+      s += t;
+      
+    }
+    // if (t_referencesContext.join_clause() != null)
+    //   t_referencesContext.join_clause().
     s += "\n";
     return s;
   }

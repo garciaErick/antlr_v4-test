@@ -1,4 +1,4 @@
-package com.erick.example.antlr;
+package com.erick.antlr.expression;
 
 import java.util.BitSet;
 import java.util.Locale;
@@ -12,6 +12,9 @@ import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.atn.ATNConfigSet;
 import org.antlr.v4.runtime.dfa.DFA;
 
+import com.erick.example.antlr.MySQLLexer;
+import com.erick.example.antlr.SimpleLexer;
+import com.erick.example.antlr.SimpleParser;
 import com.erick.example.antlr.SimpleParser.ExprContext;
 
 public class ExpressionParser {

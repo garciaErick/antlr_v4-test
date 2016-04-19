@@ -9,6 +9,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import com.erick.antlr.expression.ExpressionParser;
+
 /*
  * Test set that tests different expressions against their expected results.
  */

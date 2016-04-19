@@ -35,13 +35,7 @@ public class MySQLVisitor {
       }
       if (t_references != null) {            //FROM
         Table_referencesParser t_referencesParser = new Table_referencesParser(t_references);
-        this.j_clause_list = t_referencesParser.getJ_clause_list();
         System.out.println(t_referencesParser);
-        System.out.println("Jclause " +  j_clause_list.isEmpty());
-      }
-      if (!j_clause_list.isEmpty()) {
-        Join_clauseParser j_clauseParser = new Join_clauseParser(j_clause_list);
-        System.out.println(j_clauseParser);
       }
     }
     catch(IllegalStateException e){
