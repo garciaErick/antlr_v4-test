@@ -12,12 +12,15 @@ public class Join_clauseParser {
    */
   public Join_clauseParser(List<Join_clauseContext> j_clause_list) {
     this.j_clause_list = j_clause_list;
-    j_clause_list.get(0).
   }
 
   @Override
   public String toString() {
-    String s = "" ;
+    String s = "JOIN CLAUSE:" ;
+    for(Join_clauseContext j : this.j_clause_list){
+      // s+= "Table Atom: " + j.table_atom().getText();
+      s+= j.getText();
+    }
     return s;
   }
 }

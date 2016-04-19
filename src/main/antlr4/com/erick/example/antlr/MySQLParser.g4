@@ -99,7 +99,7 @@ simple_expression
    ;
 
 table_references
-   : table_reference ( ( COMMA table_reference ) | f )*
+   : table_reference ( ( COMMA table_reference ) | join_clause)*
    ;
 
 table_reference

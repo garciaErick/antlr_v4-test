@@ -38,17 +38,14 @@ public class Table_referencesParser {
   public String toString() {
     String s = "T_REFERENCES: \n";
     for(Table_referenceContext t : this.t_references){
+      s+= "Goal: " + t.getText() + "\n";
       Table_factor1Parser t_factor1 = new Table_factor1Parser(t.table_factor1());
-      s += "  Table Factor1: " + t_factor1;
+      if (t_factor1 != null)
+        s += "\n" + t_factor1;
       if(t.table_atom() != null)
         s += "  Table Atom: " + t.table_atom().getText();
-      // s+= "Table References: "  + t.getText();
   }
     s += "\n";
-    for(Join_clauseContext j : this.j_clause_list){
-      s+= "Table Atom: " + j.table_atom().getText();
-      s+= j.getText();
-    }
     return s;
   }
 }
