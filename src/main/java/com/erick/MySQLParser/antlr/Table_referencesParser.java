@@ -24,13 +24,12 @@ public class Table_referencesParser {
 
   @Override
   public String toString() {
-    String s = "FROM: \n";
+    String s = "FROM: ";
     for (Table_referenceParser t : t_referenceParser) {
-      s += t;
-      
+      s += "    " + t;
     }
-    // if (t_referencesContext.join_clause() != null)
-    //   t_referencesContext.join_clause().
+    if (t_references.join_clause() != null)
+      s += "    " + t_references.join_clause();
     s += "\n";
     return s;
   }

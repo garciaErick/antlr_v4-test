@@ -22,47 +22,19 @@ public class Column_nameParser {
     
   }
 
-  /**
-   * @return the c_name
-   */
-  public Column_nameContext getC_name() {
-    return c_name;
-  }
-
-  /**
-   * @return the schema_name
-   */
-  public Schema_nameContext getSchema_name() {
-    return schema_name;
-  }
-
-  /**
-   * @return the c_alias
-   */
-  public Column_name_aliasContext getC_alias() {
-    return c_alias;
-  }
-
-  /**
-   * @return the t_alias
-   */
-  public Table_aliasContext getT_alias() {
-    return t_alias;
-  }
-
   public String toString() {
     String s = "";
-    s += "Column: " + c_name.ID(0) + "\n ";
+    s += "Column: " + c_name.ID(0) + "";
     if (c_name.ID().size() > 1)
       s += "     ID: " + c_name.ID(1);
     s += "\n";
-    // if (c_name.schema_name() != null)  //((schema_name DOT)
-    //   s += c_name.schema_name().getText() + c_name.DOT(0);
-    // if (c_name.USER_VAR() != null){ //USER_VAR ( column_name_alias  )?
-    //   s += c_name.USER_VAR().getText();              //USER_VAR
-    //   if (c_name.column_name_alias() != null)        //column_name_alias
-    //     s += c_name.column_name_alias().getText(); 
-    // }
+    if (c_name.schema_name() != null)  //((schema_name DOT)
+      s += c_name.schema_name().getText() + c_name.DOT(0);
+    if (c_name.USER_VAR() != null){ //USER_VAR ( column_name_alias  )?
+      s += c_name.USER_VAR().getText();              //USER_VAR
+      if (c_name.column_name_alias() != null)        //column_name_alias
+        s += c_name.column_name_alias().getText(); 
+    }
     return s;
     
   }

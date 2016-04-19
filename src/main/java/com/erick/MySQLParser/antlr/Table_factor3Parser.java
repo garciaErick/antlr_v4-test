@@ -23,7 +23,7 @@ public class Table_factor3Parser {
   @Override
   public String toString() {
     String s = "";
-    s += t_factor4Parser.get(0) + " ";       //table_factor4
+    s += t_factor4Parser.get(0) + "";       //table_factor4
     if (t_factor3.LEFT() != null)            //LEFT
       s += t_factor3.LEFT().getText()  + " ";   
     else if (t_factor3.RIGHT() != null)      //RIGHT

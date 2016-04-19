@@ -13,18 +13,17 @@ public class Table_referenceParser {
   public Table_referenceParser(Table_referenceContext t_reference) {
     this.t_reference = t_reference;
     t_factor1Parser = new Table_factor1Parser(t_reference.table_factor1());
-    // t_atomParser = new Table_atomParser(t_reference.table_atom());
+    t_atomParser = new Table_atomParser(t_reference.table_atom());
 
   }
 
   @Override
   public String toString() {
     String s = "";
-    s += "Goal: " + t_reference.getText() + "\n";
     if (t_factor1Parser != null)
       s += "\n" + t_factor1Parser;
-    // if (t_atomParser != null)
-    //   s += "" + t_atomParser;
+    if (t_atomParser != null)
+      s += "" + t_atomParser;
     return s;
   }
 

@@ -37,6 +37,10 @@ public class MySQLVisitor {
         Table_referencesParser t_referencesParser = new Table_referencesParser(t_references);
         System.out.println(t_referencesParser);
       }
+      if (w_clause != null){                 //Where
+        Where_clauseParser w_clauseParser = new Where_clauseParser(this.w_clause);
+        System.out.println(w_clauseParser);
+      }
     }
     catch(IllegalStateException e){
       System.out.println(e);

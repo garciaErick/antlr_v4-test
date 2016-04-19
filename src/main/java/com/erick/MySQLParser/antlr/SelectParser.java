@@ -38,11 +38,8 @@ public class SelectParser {
 	
 	public String toString(){
    String s = "";
-   s += "SELECT: \n";
+   s += this.s_statement.SELECT().getText() + ": \n";
    s += c_list_clauseParser;
-		// String s = "SELECT: " + this.getC_list().getText() + "\nFROM: " + this.getT_references().getText();
-		if(this.getW_clause() != null)
-			s+= "\n" + this.getW_clause().getText();
 		return s;
 	}
 
